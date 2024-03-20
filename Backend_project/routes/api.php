@@ -25,6 +25,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 #RUTA PARA USERS 
+/*Este metodo permite hacer las operaciones crud sin tener que 
+especificar los metodos de conexion simplemente se utiliza
+la tabla y el controlador 
+
+*/
 Route::resource('users',UsersController::class);
 #RUTA PARA SALES 
 Route::resource('sales',SalesController::class);
