@@ -23,7 +23,7 @@ class SalesController extends Controller
     {
         $user=new Sale();
         $user->users_id =$request->users_id;
-        $user->product_id =$request->product_id;
+        $user->products_id =$request->products_id;
         $user->quantity =$request->quantity;
         $user->SalePrice =$request->SalePrice;
         $user->save();
@@ -38,7 +38,7 @@ class SalesController extends Controller
     {
         $user=Sale::find($id);
         $user->users_id =$request->users_id;
-        $user->product_id =$request->product_id;
+        $user->products_id =$request->products_id;
         $user->quantity =$request->quantity;
         $user->SalePrice =$request->SalePrice;
         $user->save();

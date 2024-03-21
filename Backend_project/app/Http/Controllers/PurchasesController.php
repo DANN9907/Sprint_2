@@ -21,7 +21,7 @@ class PurchasesController extends Controller
     {
         $user=new Purchase();
         $user->users_id =$request->users_id;
-        $user->product_id =$request->product_id;
+        $user->products_id =$request->products_id;
         $user->quantity =$request->quantity;
         $user->PurchasePrice =$request->PurchasePrice;
         $user->save();
@@ -36,7 +36,7 @@ class PurchasesController extends Controller
     {
         $user=Purchase::find($id);
         $user->users_id =$request->users_id;
-        $user->product_id =$request->product_id;
+        $user->products_id =$request->products_id;
         $user->quantity =$request->quantity;
         $user->PurchasePrice =$request->PurchasePrice;
         $user->save();

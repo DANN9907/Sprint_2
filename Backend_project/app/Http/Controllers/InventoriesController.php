@@ -18,7 +18,7 @@ class InventoriesController extends Controller
     public function store(Request $request)
     {
         $user=new Inventory();
-        $user->product_id =$request->product_id;
+        $user->products_id =$request->product_id;
         $user->quantity =$request->quantity;
         $user->DateTime =$request->DateTime;
         $user->save();
@@ -32,7 +32,7 @@ class InventoriesController extends Controller
     public function update(Request $request, string $id)
     {
         $user=Inventory::find($id);
-        $user->product_id =$request->product_id;
+        $user->products_id =$request->product_id;
         $user->quantity =$request->quantity;
         $user->DateTime =$request->DateTime;
         $user->save();

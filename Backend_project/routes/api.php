@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
 
 #RUTA PARA USERS 
@@ -30,13 +30,13 @@ especificar los metodos de conexion simplemente se utiliza
 la tabla y el controlador 
 
 */
-Route::resource('users',UsersController::class);
+Route::apiResource('/users',UsersController::class);
 #RUTA PARA SALES 
-Route::resource('sales',SalesController::class);
+Route::apiResource('/sales',SalesController::class);
 #RUTA PARA PRODUCT
-Route::resource('product',ProductsController::class);
+Route::apiResource('/product',ProductsController::class);
 #RUTA PARA INVENTORY
-Route::resource('inventory',InventoriesController::class);
+Route::apiResource('/inventory',InventoriesController::class);
 #RUTA PARA PURCHASE
-Route::resource('purchase',PurchasesController::class);
+Route::apiResource('/purchase',PurchasesController::class);
 
